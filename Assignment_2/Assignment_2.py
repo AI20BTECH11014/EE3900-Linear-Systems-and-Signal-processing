@@ -13,6 +13,8 @@ A = np.array([[5],[1/2],[-1]])
 A_t=transpose(A)
 
 print("Transpose of matrix A is")
+print('using inbuilt function:',A.T )
+print("using transpose function:")
 for i in range(np.shape(A)[1]):
     for j in range(np.shape(A)[0]):
         print(A_t[i][j], " ", end='')
@@ -23,6 +25,8 @@ B = np.array([[1,-1],[2,3]])
 B_t=transpose(B)
 
 print("Transpose of matrix B is")
+print('using inbuilt function:',B.T )
+print("using transpose function:")
 for i in range(np.shape(B)[1]):
     for j in range(np.shape(B)[0]):
         print(B_t[i][j], " ", end='')
@@ -33,7 +37,9 @@ C = np.array([[-1,5,6],[pow(3,0.5),5,6],[2,3,-1]])
 C_t=transpose(C)
 
 print("Transpose of matrix C is")
+print('using inbuilt function:',C.T )
+print(" using transpose function:")
 for i in range(np.shape(C)[1]):
     for j in range(np.shape(C)[0]):
         print(C_t[i][j], " ", end='')
-    print()   
+    print() 
