@@ -133,23 +133,23 @@ $$\myvec{3&-2} \vec{x} = -7$$
 is always 10. Show that $\vec{P}$ must move on a line.
 
 \section{SOLUTION}
-The foot of perpendicular from point $\vec{P}$ to line $\myvec{1&1} \vec{x} = 0$ is given as $\vec{P} + \alpha_{1}\myvec{1\\1}$,where $\alpha_{1} \in \R$
+The foot of perpendicular from point $\vec{P}$ to line $ \vec{n}^{\top }\vec{x} =c$ is given as $\vec{P} + \alpha \vec{n}$,where $\alpha \in \R$
 \begin{align}
- \myvec{1&1} \brak{\vec{P} + \alpha_{1}\myvec{1\\1}} = 0\\
- \myvec{1&1}\vec{P} + 2\alpha_{1} =0 \label{a}
+\vec{n}^{\top }\brak{\vec{P} + \alpha\vec{n}} = c\\
+ \vec{n}^{\top }\vec{P} + \norm{\vec{n}}^{2}\alpha =c \label{1}
 \end{align}
-The foot of perpendicular from point $\vec{P}$ to line $\myvec{3&-2} \vec{x} = -7$ is given as $\vec{P} + \alpha_{2}\myvec{3\\-2}$,where $\alpha_{2} \in \R$
+The perpendicular distance from a point $\vec{P}$ to line $ \vec{n}^{\top }\vec{x} =c$ is given as,
 \begin{align}
-\myvec{3&-2} \brak{\vec{P} + \alpha_{2}\myvec{3\\-2}} = -7\\
- \myvec{3&-2}\vec{P} + 13\alpha_{2} =-7 \label{b}
+&=\norm{\vec{P} - \brak{\vec{P} + \alpha\vec{n}}}\\
+&=\abs{\alpha}\norm{\vec{n}} \label{2}
+\end{align}
+using \eqref{1} in \eqref{2}, perpendicular distance is given as,
+\begin{align}
+&=\dfrac{\abs{c- \vec{n}^{\top }\vec{P}}}{\norm{\vec{n}}} \label{3}
 \end{align}
 Given,
 \begin{align}
-\norm{\vec{P} - \brak{\vec{P} + \alpha_{1}\myvec{1\\1}}} + \norm{\vec{P} -  \brak{\vec{P} + \alpha_{2}\myvec{3\\-2}}} =10 \\
-\sqrt{2} \abs{\alpha_{1}} + \sqrt{13} \abs{\alpha_{2}} =10 \label{c}
-\end{align}
-From equations \eqref{a} , \eqref{b} and \eqref{c},
-\begin{align}
+\dfrac{\abs{0- \myvec{1&1} \vec{P}}}{\norm{\myvec{1&1}}} + \dfrac{\abs{7+ \myvec{3&-2} \vec{P}}}{\norm{\myvec{3&-2}}}=10\\
 \dfrac{1}{\sqrt{2}} \abs{\myvec{1&1}\vec{P}} + \dfrac{1}{\sqrt{13}} \abs{\myvec{3&-2}\vec{P} +7} = 10
 \end{align}
 $\therefore$ point $\vec{P}$ lies on either of the lines
@@ -160,3 +160,4 @@ L_3&:\myvec{\dfrac{1}{\sqrt{2}}+\dfrac{3}{\sqrt{13}}& \dfrac{1}{\sqrt{2}}-\dfrac
 L_4&:\myvec{-\dfrac{1}{\sqrt{2}}+\dfrac{3}{\sqrt{13}}& -\dfrac{1}{\sqrt{2}}-\dfrac{2}{\sqrt{13}}}\vec{P} = 10 - \dfrac{7}{\sqrt{13}}
 \end{align}
 \end{document}
+
