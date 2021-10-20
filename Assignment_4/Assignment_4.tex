@@ -147,7 +147,14 @@ using \eqref{1} in \eqref{2}, perpendicular distance is given as,
 \begin{align}
 &=\dfrac{\abs{c- \vec{n}^{\top }\vec{P}}}{\norm{\vec{n}}} \label{3}
 \end{align}
-Given,
+The sum of the perpendicular distances of a variable point $\vec{P}$ from the lines 
+$$\vec{n_{1}}^{\top } \vec{x} = c_{1}$$
+$$\vec{n_{2}}^{\top } \vec{x} = c_{2}$$
+is always d,then,
+\begin{align}
+\dfrac{\abs{c_{1}- \vec{n_{1}}^{\top }\vec{P}}}{\norm{\vec{n_{1}}}}+ \dfrac{\abs{c_{2}- \vec{n_{2}}^{\top }\vec{P}}}{\norm{\vec{n_{2}}}} = d
+\end{align}
+given,
 \begin{align}
 \dfrac{\abs{0- \myvec{1&1} \vec{P}}}{\norm{\myvec{1&1}}} + \dfrac{\abs{7+ \myvec{3&-2} \vec{P}}}{\norm{\myvec{3&-2}}}=10\\
 \dfrac{1}{\sqrt{2}} \abs{\myvec{1&1}\vec{P}} + \dfrac{1}{\sqrt{13}} \abs{\myvec{3&-2}\vec{P} +7} = 10
@@ -160,4 +167,3 @@ L_3&:\myvec{\dfrac{1}{\sqrt{2}}+\dfrac{3}{\sqrt{13}}& \dfrac{1}{\sqrt{2}}-\dfrac
 L_4&:\myvec{-\dfrac{1}{\sqrt{2}}+\dfrac{3}{\sqrt{13}}& -\dfrac{1}{\sqrt{2}}-\dfrac{2}{\sqrt{13}}}\vec{P} = 10 - \dfrac{7}{\sqrt{13}}
 \end{align}
 \end{document}
-
