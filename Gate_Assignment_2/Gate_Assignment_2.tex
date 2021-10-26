@@ -129,15 +129,19 @@ columns=fullflexible
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
-Download latex-tikz codes from
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/AI20BTECH11014/EE3900-Linear-Systems-and-Signal-processing/blob/main/Gate_Assignment_2/GATE_Assignment_2.py
+\end{lstlisting}
+%
+and latex-tikz codes from 
 %
 \begin{lstlisting}
 https://github.com/AI20BTECH11014/EE3900-Linear-Systems-and-Signal-processing/blob/main/Gate_Assignment_2/Gate_Assignment_2.tex
 \end{lstlisting}
 %
-
 \section{EC 2007 Q.16}
-If the Laplace transform of a signal $y(t)$ is $$y(s)=\dfrac{1}{s(s-1)}$$then its final value is 
+If the Laplace transform of a signal $y\brak{t}$ is $$y\brak{s}=\dfrac{1}{s(s-1)}$$then its final value is 
 \begin{enumerate}
     \item -1
     \item 0
@@ -153,6 +157,58 @@ FINAL VALUE THEOREM
 \end{align}
 It determines the steady-state value of the system response without finding the inverse transform.It is applicable only for stable systems.
 \end{theorem}
-s=1 is right s-plane pole.As the system is not lining left half of s-plane,the system is unstable.Hence, it is unbounded.
+Given,
+$$y\brak{s}=\dfrac{1}{s(s-1)}$$
+from Final value theorem,
+\begin{align}
+   	\lim_{t \to +\infty} y\brak{t} &= \lim_{s \to 0} sy\brak{s}\\
+   	&= \lim_{s \to 0} s\dfrac{1}{s(s-1)}\\
+   	&= \lim_{s \to 0} \dfrac{1}{(s-1)}
+\end{align}
+s=1 is right s-plane pole of $y\brak{s}$ with ROC $\abs{s}>1$ .As the system is not lining left half of s-plane,the system is unstable.Hence, it is unbounded.
 $\therefore$ option 4 is correct.
+\begin{figure}[!h]
+ \centering
+ \includegraphics[width=\columnwidth]{fig_GA_1.png}
+ \caption{ROC for $y\brak{s}$.}
+\end{figure}
+\begin{lemma}[Table of Inverse Laplace Transforms]\label{tbl}
+\begin{center}
+\begin{tabular}{ |m{3cm}|m{4.5cm}| } 
+ \hline
+ $\textbf{Laplace transform}$ of f(t) $F\brak{s}=\mathcal{L}\cbrak{f\brak{t}}$  & $\textbf{Time Function}$$ f(t)=\mathcal{L}^{-1}\cbrak{F(s)}$ \\ 
+ \hline
+ $\dfrac{1}{s}$, $s>0$ &1 \\ 
+ \hline
+ $\dfrac{1}{s-a}$, $s-a>0$ & $e^{at}$\\
+ \hline
+\end{tabular}
+\end{center}
+\end{lemma}
+
+\begin{lemma}{Linearity of Inverse Laplace Transform} \label{l2}
+\begin{align}
+    \mathcal{L}^{-1}\cbrak{af\brak{t}+bg\brak{t}}=a\mathcal{L}^{-1}\cbrak{f\brak{t}}+b\mathcal{L}^{-1}\cbrak{g\brak{t}}
+\end{align}
+\end{lemma}
+
+\begin{align}
+    y\brak{t}&= \mathcal{L}^{-1}\cbrak{y\brak{s}}\\
+    &= \mathcal{L}^{-1}\cbrak{\dfrac{1}{s(s-1)}}\\
+     &= \mathcal{L}^{-1}\cbrak{\dfrac{-1}{s} + \dfrac{1}{s-1}}
+\end{align}
+From Lemma-\ref{l2},
+\begin{align}
+    &= \mathcal{L}^{-1}\cbrak{\dfrac{-1}{s}} +  \mathcal{L}^{-1}\cbrak{
+    \dfrac{1}{s-1}}
+\end{align}
+From Lemma-\ref{tbl},
+\begin{align}
+     y\brak{t}&= -1 + e^{t}
+\end{align}
+\begin{figure}[!h]
+ \centering
+ \includegraphics[width=\columnwidth]{fig_2.png}
+ \caption{plot of $y\brak{t}$ in input domain.}
+\end{figure}
 \end{document}
