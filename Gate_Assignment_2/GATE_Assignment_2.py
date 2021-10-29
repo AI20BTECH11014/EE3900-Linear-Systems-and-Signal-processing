@@ -1,3 +1,4 @@
+import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
@@ -35,9 +36,7 @@ circle = plt.Circle([0,0],1,color = 'w')
 fig.gca().add_artist(circle)
 
 patches = mpatches.Patch(color="g", label="ROC")
-dotted_line = mlines.Line2D([],[],color = 'b',label='Unit circle')
-dotted_line.set_linestyle('--')
-plt.legend(handles=[patches,dotted_line], loc = 'upper right')
+plt.legend(handles=[patches], loc = 'upper right')
 
 plt.grid()
 plt.xlabel("Re")
